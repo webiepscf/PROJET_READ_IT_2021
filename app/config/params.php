@@ -9,5 +9,8 @@
         define('DB_USER',     'root');
         define('DB_PASSWORD', 'root');
 
+    // Format de dates par défaut
+        define('DATE_FORMAT', 'd-m-Y');
+
     // Initialisation des zones dynamiques
         $content = '';
