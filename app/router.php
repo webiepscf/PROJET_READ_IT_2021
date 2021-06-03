@@ -2,6 +2,8 @@
 /*
     ./app/router.php
  */
+use \App\Controllers\PostsController;
+
 
  // ROUTE DU DÉTAIL D'UN POST
  // PATTERN: /?postID=x
@@ -9,7 +11,7 @@
  // ACTION: show
  if (isset($_GET['postID'])):
     include_once '../app/controllers/postsController.php';
-    showAction($conn, $_GET['postID']);
+    PostsController\showAction($conn, $_GET['postID']);
 
  // ROUTE PAR DÉFAUT: liste des 10 derniers posts 
  // PATTERN: /
@@ -17,5 +19,5 @@
  // ACTION: index
  else:
     include_once '../app/controllers/postsController.php';
-    indexAction($conn);
+    PostsController\indexAction($conn);
  endif;
