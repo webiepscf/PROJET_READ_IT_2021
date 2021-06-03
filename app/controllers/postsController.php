@@ -26,6 +26,12 @@
     include_once '../app/models/postsModel.php';
     $post = findOneById($conn, $id);
 
+    // 1.bis Je demande la liste des tags de ce post au modèle
+    // Et je les mets dans $tags
+    include_once '../app/models/tagsModel.php';
+    $tags = findAllByPostId($conn, $id);
+
+
     // 2. Je charge la vue posts/show dans $content
     GLOBAL $content;
     ob_start();
