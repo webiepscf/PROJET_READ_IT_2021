@@ -2,6 +2,7 @@
 /*
     ./core/functions.php
  */
+namespace Core\Functions;
 
  /**
   * Formatage d'une date avec format francophone par défaut
@@ -11,6 +12,6 @@
   * @return string
   */
 function formater_date(string $date, string $format = DATE_FORMAT) :string {
-    $date = new DateTime($date);
+    $date = new \DateTime($date);
     return $date->format($format);
 }
